@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POrtfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./portfolio.css">
+    <script>
+        function changeBacgroundColor() {
+            const color=[
+                "grey","milk","bisque","antiquewhite","blanchedalmond"
+            ]
+            let currentColor=0
+            setInterval(()=>{
+                document.documentElement.style.backgroundColor=color[currentColor],
+                currentColor=(currentColor + 1) %color.length
+            },100000)
+            
+        };
+        window.onload=changeBacgroundColor
+    </script>
+
+   
+   
+            
+     
+         <script>
+             let scrollInterval; // Variable to hold the interval ID
+             let direction = 1; // 1 for down, -1 for up
+     
+             function startAutoScroll() {
+                 const userSpeed = document.getElementById('scroll').value;
+     
+                 if (!userSpeed || isNaN(userSpeed) || userSpeed <= 0) {
+                     alert("Please enter a valid number of seconds");
+                     return;
+                 }
+     
+                 // Clear any existing interval
+                 clearInterval(scrollInterval);
+     
+                 const speed = userSpeed * 1000;
+     
+                 scrollInterval = setInterval(() => {
+                     const scrollTop = window.scrollY; // Current scroll position
+                     const scrollHeight = document.documentElement.scrollHeight; // Total scrollable height
+                     const clientHeight = document.documentElement.clientHeight; // Visible height of the page
+     
+                     if (scrollTop + clientHeight >= scrollHeight && direction === 1) {
+                         direction = -1; // Change direction to up
+                     } else if (scrollTop <= 0 && direction === -1) {
+                         direction = 1; // Change direction to down
+                     }
+     
+                     window.scrollBy(0, direction); // Scroll by 1 pixel in the current direction
+                 }, speed / 100);
+             }
+     
+             function stopAutoScroll() {
+                 clearInterval(scrollInterval); // Stop the scrolling
+             }
+         </script>
+    
+   
+    
+    <div class="header"><a style="text-decoration: none; transition:all;" href="./portfolio.html"><h3>Home</h3></a>
+        <a style="text-decoration: none; transition:all;" href="./about.html"><h3>ABOUT</h3></a>
+        
+        <h3 class="MyTechBro"><i class="fa-solid fa-user"></i>MyTechBro</h3>
+        <h3>projects</h3>
+        <h3>Blog</h3>
+        <p class="Resume"><a href="https://docs.google.com/document/d/1HY2eIiDyiFbfWC7iBksUvCGLTMNdKM3mwy1cjyVcgIY/edit?usp=sharing"><span style="color: white; text-decoration: none;">Resume</span></a>
+        </p></div>
+</head>
+<body>
+ 
+    <div class="scroll">
+        <label for="scrollSpeed">Enter scrolling speed (seconds):</label>
+        <input type="number" id="scroll" placeholder="eg,2">
+        <button onclick="startAutoScroll()"> start scrolling</button>
+        <button onclick="stopAutoScroll()"> stop scrolling</button>
+    </div>
+    <div class="pics"><img style="border-radius: 50px;" src="../folder/3 am.JPG" alt="MyTechBro" height="400px" width="400px">
+   <div class="text"><h1 > Hey dude, welcome to my Portfolio.. I am Isah Abdul wahab</h1>
+    <p style="color: blue; font-size: 40px; animation: float 5s infinite ease-in-out;">BACK-END DEVELOPER</p>
+    <p>I build BACK-END application which is the server side of website development, I ensure that the apps I deliver are fast, easy to use, and responsive</p>
+
+<p class="social-media">
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOdJREFUSEvt1CFOQ0EQxvFfBSHoguEIxSEqMBgOQELKDUpAYlA1FXgcTbB1xRBsBQJLD1ASJCS0VyCBl4xompLNvryXVHTVZHfn+8/O7ExDzatRs761AxzgFm3s4hND9P7LRM4L9vGB7SWxR3SqANzjcoXQCOdVAN5wGEIvOMFP6pPkpOgbeyF4hUFKvDjPAczRDNELPFQBKHLbCqEb7IT9jEnYrxiXrUHxQ84SkV7jrk7AKZ7KAvo4DuejvybbCnuKr7C7eC8LWPSbRfcWe5UVeQPIarRNDZKTpfYUJSNYdSFnmq4n4BdfByoZ/9M5/QAAAABJRU5ErkJggg=="/>
+
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAi9JREFUSEvN1UnITnEUBvDfx8JMdoREiChThg1JmVI2hqIUiTInZcGGYiE2xpQSxUKxUJJZSCFiY0ghsjKkKGS+R+f7ent77/vafPWd1e3e8z/P/zznOc9t0srR1Mr1tQmAsViAyRiCX7iFO7iAB/VYqNdBPxzGDHzOQk/wDaMxEj2wG1vwvRZQGUDc9Bo6YAOO40+NAmsT4AXm4VF1Ti2AXriXVEzF8wZCGFF0dAbtMBxfKvNrAZzDeIzDy4KmPuiGp3WAAuQ+jmBlPYBJuIFlmTwsu3mHASU0NdfbjB2YjkvNL6s72Iel6FkM7kfR7ibszOQY9sU6XXRKMQRdc8sAHuI15mTCKhzI5wA+2mAecT5iVBnAm4L/mMGKTOidc/iIkO3PBgCHsAjdywCe5bAWVhQKKe7FQaxpMIegcz06lgGcT/4nVN30ZG5z8BuAnZOuUM2pomh0GBF5YzC4DGB7DrYv3laAtC+A92A1PvHPw0K6EbvyTOzBe5zG8jKAgblY24qErTX4npZ0Dc1vvzEzZRncn0hraVFbrUULJYShhcmVRdAQg3yVIuiPuwivmlJ5qBqgS/IZ+7CxgWKaP0fxywkY2x8yb4lqgNk4W9C0GNF+bOXtYouP4WsVYMxpCdalssK3Gprd/hxkc604MCit+HrSEa4aXjUxk27m9tc0xeoOwkMi8SquFJL8UNhx1+Jm84sfzCyEfMNGHqdnhUSD+9JoE7/M/5x17bRW7+Av0jpxGTt6Zt0AAAAASUVORK5CYII="/>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARZJREFUSEvt1U8rhUEUx/HPpZQV2VjZoCxEycqfsvAy5CWwt7K35C3Iy5CFFFlbyJ+yslI2LBTu1BlN9z5JnvuwYOqpmXk6v++c3znTtDQ8Wg3rqwJMBPS6F/BOwC42QngPm3UhJSCd/KpDcBK1MvlRQDp8oxZldxot8iIGgvSM05jPYSjmTzhrZzuCZcygHwcVNexq03uMhtANcjbHWIr9S2yHYFnDV2xhp2yUzjb9CuABg/FVdfEqDvOP7wBybALdYRZ9BSlZtVYXsN++H+shsoKjAnCB6bqAKaRa5JEyGYvFI4brAlKnvRSAc8wX6w/rP6vBLcYjqOyitJU8fysET7DwD8gX7Y9bVPcB64r/lUe/p1m8A9mnURl6/sH5AAAAAElFTkSuQmCC"/>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAdtJREFUSEvF1T2oj2EYBvDf8RFSIoMyWJCEImyUxUgGDGIxCSUGGaRkMCgZyGD1OUhMskgWsSBJyaBMLAol3+91ev+nx9P75pz079zbe39d98d1P++IIcvIkPObNIDFOIKNWElvIb/xAg9xDq/riXR1sL91nj7B8X3HAVwq42qAtXiMKRNMPnD/gXV4NlDUALewbQLJ32MVduB8G3ezGdv2PoC3WNQB8A6n8RLzsQzHEP8ApOonbdwbLOkD+IzZFcC9tqJPmIcs9iNW4C6+NDubiwVtXPzmdAFk7j+r5B+wtGXSLmxoAR40XVzDtJZBZVj2MEaQcgdRfqsAzuBoU91F7KtsF3AQd7ClsKXIAI9KCRBlqFbKXmTx4XnuoZTwP/M/0eQ5WRh+YWoXQMBiLCW8vor7WF3ZnmINjjcJT1W2scJrmmaBpVzGnvbwDlW2XO7hBuQ2tha23h3EpwZIR6l8JnZjU9tllnyloe6MjiV/xayuEUXXRdNwPceXkZSSd+o6Flb6UDh0HpV6RHmsxo6kWlwutDy0zVXiwecrLO8DuNEk2dkTOF51RpdxdnawHo/+87HLg/m8DyD6oT7XA+Dyh5Nj6pPyh3O2oXQeur9k0n6Z413oP/2G3sEfpZVaGY83euAAAAAASUVORK5CYII="/>
+<img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAjBJREFUSEu11UnIjlEUB/DfJ7IhCyRZosxFslCKKGFjKEOKEjKlJGOJZAglkiHsCCXDhh0LC5SIjEWysDAkC1KIPOfrvnW/53uHx+I7m/e99/7P/Z9z7jn/p00XW1sX368VQQ/MxgyMxlDafd7hCW4W+1fwu1GgzQim4SSGtMjyLVbiVj1cI4It2J+irVLFv9iKQ2VwPYLNOFDl1jqYDTiS75cJpqRUYz/quwyrsQPd8CbVezgi6n04gWOYl/Ym4W6NJCfoiecYnA53Y2f6H+/wEd/SuhcG4nVab8fe9P8FxhRB/Yl1TrAAl7L0ItVIuYodxKYMOCtVoAPB+SKixRloIu5VuT1F/DgL+DjWlTOI8ozI0hxZ8fIa7CHGpcWDIoMJZYJP6J8A14tBmvOfBBewKPl8Qb8ywYdisAYkwG1M/U+CG5iZfL6jd5ngEcYmQHRL32YSUCIPSfmMPmn/FaKVOzzyGSzPHFfgbMUsAns6w57DkjJB1PwqviJSjD6P8Q89+tGAKOZhbRq4GMSazcflMkHMRHTSoKI9p2MVluJX6umF+JluiJJcS7juJfKXGJWmupNcz03y+x7j0+BNTlmsKV10EUFatqhEdGG71RO7o1if9GdPkzfYlUlJDXa4kJONuU8juQ5xCy26U4jYUzzDqRJZnAeuZqHCleS65hCqGHoU0xnyHQ+eWyjpNtxPmhW/nazVJzPO45MZMh2Z5DYs9Xo8dkNrRdDMt9JZlxP8A6W4YxlKv0WFAAAAAElFTkSuQmCC"/>
+</p>
+<strong class="Letschat"><a style="color: white; text-decoration: none;" href="./letschat.html">Letschat</a></strong>
+</div>
+</div>
+
+<div class="allLinks">
+     <div class="links">
+
+        <p class="startHere_background">
+            <strong class="Start_here">Start_here
+                <strong><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAa1JREFUSEu11UuoTXEUx/HPYSTuVZSp150TKUndMGCg1PUWykwxM/CYu0KGGEpJ7h0YMPRIlGKAufIYk5KiO7jYq/67/u32Pvucw96j0/6v//qu9Vvrt09Px0+v4/xGBazGx0GKGwUwgfd4hc1tkFEAx3EbD7CnC8BNnMQFXOoC8A7rsA3P/gWwEgdxJUuyGN+xAEvwE2dxD5/rYE0z2IFZLMPhlCDuR9VP8QYb09ldfMMBPKlC6gBncBkLcR9Hiyp/pYvnMY3rOF3ELcIdTGE+dXMth+SACL6VZPmNSJbLE/ceYjeOpcRlrnO4mKSbKeQ6URZVAkLTF9iCH9iLRzWafsVyrMWHyvmuJOsYXmIr/pSAkCM2Il7GEPcVvx9XEpQG+4IVNfCdiOqXpmInc0DEVyWKtq9mifoZrFWivKDqkI8U85hDncGGGnIOydf0UGr9LdYjWn+egmOFh17TErQK+5NMpcHibDwZLN+gMNqnYYxWjd2eTBRdbGj7PDT5oN+9+LDFnt/AqS4ATQZrZQ36f/AamxoM1hcyKCCSrKlx73/roDVRU8AwHYwE+QvldVoZJFegJwAAAABJRU5ErkJggg=="/></strong>
+            </strong>
+        <strong class="Background"><a style="color: white; text-decoration: none;" href="./about.html">Know Isah</a>
+            <i style="background-color: goldenrod; width: 120px; height: 90px;" class="fa-brands fa-watchman-monitoring"></i>
+    
+        </strong>
+        
+     
+    
+    </p>
+    
+    
+    
+    </div>
+    <div class="links">
+    
+        <p class="startHere_background">
+            <strong class="Start_here">featured
+                <strong><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAa1JREFUSEu11UuoTXEUx/HPYSTuVZSp150TKUndMGCg1PUWykwxM/CYu0KGGEpJ7h0YMPRIlGKAufIYk5KiO7jYq/67/u32Pvucw96j0/6v//qu9Vvrt09Px0+v4/xGBazGx0GKGwUwgfd4hc1tkFEAx3EbD7CnC8BNnMQFXOoC8A7rsA3P/gWwEgdxJUuyGN+xAEvwE2dxD5/rYE0z2IFZLMPhlCDuR9VP8QYb09ldfMMBPKlC6gBncBkLcR9Hiyp/pYvnMY3rOF3ELcIdTGE+dXMth+SACL6VZPmNSJbLE/ceYjeOpcRlrnO4mKSbKeQ6URZVAkLTF9iCH9iLRzWafsVyrMWHyvmuJOsYXmIr/pSAkCM2Il7GEPcVvx9XEpQG+4IVNfCdiOqXpmInc0DEVyWKtq9mifoZrFWivKDqkI8U85hDncGGGnIOydf0UGr9LdYjWn+egmOFh17TErQK+5NMpcHibDwZLN+gMNqnYYxWjd2eTBRdbGj7PDT5oN+9+LDFnt/AqS4ATQZrZQ36f/AamxoM1hcyKCCSrKlx73/roDVRU8AwHYwE+QvldVoZJFegJwAAAABJRU5ErkJggg=="/></strong>
+            </strong>
+        <strong class="Background"><a style="color: white; text-decoration: none;" href="./portfolio.html">Portfolio</a>
+            <img style="color: aqua; background-color: rgb(19, 66, 221); height: 60px;"  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAASlJREFUSEvt1r1KBDEUhuFnQRSxsFMQBEEES29Arb0MURELQRCE1cZKsBAbsVDwNrQVvAEbLQQ7fwpbGxvdwKwsYWJmZ3c70wwzOd/3npwkh2kY8GgM2F8MGMYe1jBTA/6IXVy3tTHgCqs1jDslz5hNAd4x2SMgyH8Tj1fw3QfzWoBPvGKuSOAJUxhLJNTVCh6wjA808YUTTOAW8yWQrgCLuEtkulRA4unKgFCasOnhWTbG8YbRaLIyIOiOcJAAHBf3pvYKgjCcrE1cRi5brX0478cmtz22cVa87OD0jyPdVYk6fcIpGml9OMzcl9qAqvfwH5CtVLZEK7jJ2lQIiLvpS9HEFnBfQZ8NiQEX2Miq8gHJEg21uuU+1jGd90lGJAE9eJZLB/5X8QP3ny4ZLHPAHwAAAABJRU5ErkJggg=="/>
+    
+        </strong>
+        
+     
+    
+    </p>
+    
+    
+    
+    </div>
+   
+    <div class="links">
+    
+        <p class="startHere_background">
+            <strong class="Start_here">Latest
+                <strong><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAa1JREFUSEu11UuoTXEUx/HPYSTuVZSp150TKUndMGCg1PUWykwxM/CYu0KGGEpJ7h0YMPRIlGKAufIYk5KiO7jYq/67/u32Pvucw96j0/6v//qu9Vvrt09Px0+v4/xGBazGx0GKGwUwgfd4hc1tkFEAx3EbD7CnC8BNnMQFXOoC8A7rsA3P/gWwEgdxJUuyGN+xAEvwE2dxD5/rYE0z2IFZLMPhlCDuR9VP8QYb09ldfMMBPKlC6gBncBkLcR9Hiyp/pYvnMY3rOF3ELcIdTGE+dXMth+SACL6VZPmNSJbLE/ceYjeOpcRlrnO4mKSbKeQ6URZVAkLTF9iCH9iLRzWafsVyrMWHyvmuJOsYXmIr/pSAkCM2Il7GEPcVvx9XEpQG+4IVNfCdiOqXpmInc0DEVyWKtq9mifoZrFWivKDqkI8U85hDncGGGnIOydf0UGr9LdYjWn+egmOFh17TErQK+5NMpcHibDwZLN+gMNqnYYxWjd2eTBRdbGj7PDT5oN+9+LDFnt/AqS4ATQZrZQ36f/AamxoM1hcyKCCSrKlx73/roDVRU8AwHYwE+QvldVoZJFegJwAAAABJRU5ErkJggg=="/></strong>
+            </strong>
+        <strong class="Background">Thought
+            <img style="color: aqua; background-color: rgb(19, 66, 221); height: 60px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARBJREFUSEvt1b8rRlEcx/HXk0SKwWKymJTRZKIk/4PBYiTlP/APKAObidFqs5iVwWAwGJVNIT9C3NNzhqfbvc65dMvwnPHc7/fz/v6639PR8um0rK8JYA+rMaBDbOQElwsI4uslwf0cSC7gAaMlwCPGUln8G0DrJQqV+HOTv3CNO7zgCmc4xVtNrUewhHnMYAiTmKI7ob09CICq84Sjosk7uIkG09iKYztc45cN6PU/wSCWU9PTJIMMrUqTX2XQBNYHJKvVL1HzEm0j/PrPmMMiBpIyXYMPnEffC7wWl0HvxxdtvNhFC5jFGiZKsFsc4DLurPuqYHLfg7AeVrCJd+wWy+0Yn6kMcwEpndrvrQO+AUiqMxkTuwKXAAAAAElFTkSuQmCC"/>
+    
+        </strong>
+        
+     
+    
+    </p>
+    
+    
+    
+    </div>
+    <div class="links">
+    
+        <p class="startHere_background">
+            <strong class="Start_here">Highlight
+                <strong><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAa1JREFUSEu11UuoTXEUx/HPYSTuVZSp150TKUndMGCg1PUWykwxM/CYu0KGGEpJ7h0YMPRIlGKAufIYk5KiO7jYq/67/u32Pvucw96j0/6v//qu9Vvrt09Px0+v4/xGBazGx0GKGwUwgfd4hc1tkFEAx3EbD7CnC8BNnMQFXOoC8A7rsA3P/gWwEgdxJUuyGN+xAEvwE2dxD5/rYE0z2IFZLMPhlCDuR9VP8QYb09ldfMMBPKlC6gBncBkLcR9Hiyp/pYvnMY3rOF3ELcIdTGE+dXMth+SACL6VZPmNSJbLE/ceYjeOpcRlrnO4mKSbKeQ6URZVAkLTF9iCH9iLRzWafsVyrMWHyvmuJOsYXmIr/pSAkCM2Il7GEPcVvx9XEpQG+4IVNfCdiOqXpmInc0DEVyWKtq9mifoZrFWivKDqkI8U85hDncGGGnIOydf0UGr9LdYjWn+egmOFh17TErQK+5NMpcHibDwZLN+gMNqnYYxWjd2eTBRdbGj7PDT5oN+9+LDFnt/AqS4ATQZrZQ36f/AamxoM1hcyKCCSrKlx73/roDVRU8AwHYwE+QvldVoZJFegJwAAAABJRU5ErkJggg=="/></strong>
+            </strong>
+        <strong class="Background">Resources
+            <i style="background-color: gold; width: 60px; height: 60px;" class="fa-sharp-duotone fa-regular fa-file-lines"></i>
+    
+        </strong>
+        
+     
+    
+    </p>
+    
+    
+    
+    </div> </div>
+
+    <div class="nighty">
+      <div class="text"> <strong style="color: blueviolet; font-size: 80px; word-wrap: break-word;">Send a <br> message</strong>
+     <p style="font-size: 20px;">I'm currently available to take on new projects, so feel free to send me a message about anything you'd like me to work on</p>
+
+     <p class="gmail">  <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAUpJREFUSEvt1T0vREEUxvHfIiKhUItCoZD4AHqJSkGCAomKRomESkOhQKGh9pJoNBKdDh9BVDoSvoHC247cXZObXbO7bOd2k3Pm+Z/nzJy5BU3+Ck3W9w9Idjhu0TAO0I1DrOE1qfCdMIYNtGMe1yEUAx7REwneYBJPCUgbtrAc5d2jPw/4qCD0jClcVYH04RRDFeJfxccOKgFCTmjTKnZzIuM4QlcVeM2A0v5zzOANe1hItK5uQNC7y1wP1HD4DQFq0C2nJAGXxQMMlfYmVB8yZyO5vCRgG5s4wWgVyAVmsY6legE7WMk2LSKsO7L1Sya4n61D7FeAoDOIs0xwojgft1HFfwIIep3ZNQ0O4i+0M57k8oz9NGhxi1K3pyYHYYBacrZLZ5AC5B28Fx++1vxTcYzpCFKPgxgQxMPNm8sDUlU2FP//ZSbb9gmdCD4Zw9bafwAAAABJRU5ErkJggg=="/>  isahabdulwahab243@gmail.com</p>
+     <p class="gmail">   <img  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAXlJREFUSEu11L1LXUEQxuHHIkUsbKJFEMQPJBAEEVSCoq2QIo2VhY1NCgtBSJU+lWCKVCkVDOQPsLD0C7QwECQ2AQUDsQgpFQyid+GccLmec3avcrfdd+c3887MtmnxaWtxfCmAHszhNYazhL5hE1/wqyrJKkAH1vGmIsAtvmIBl0W6MkA7DjCUaGHQTuFfo74MsIb5xOC5bBXLKYCXOKawP3lCwZrGc41e/K6/KKrgExZLsq8ChCfv8SEG+Flr7sADATuYjgHCNDytE8VGud6uv3gWA/xpEDUDCG+7YoBDjD3Qon1MxgCPafIK3sUAIftQRdViFo1p0A8iDMn/U+bvEUaaXLQtzKQsWtCMZlXEGpzHCxWFb+VHKiDoPmIpsYrPtQ1+W+Vp0d0T7Na+5fEI5Dte4apZQNB3ZpAXJZBTTOCiLIkUj59jD30NQc6yb+G8qsIUQHjfjW30Z8HCQs1WZZ5DUwG5XRs4yf79m5QBaAaQEu+epuWAO69wPBmgJWOuAAAAAElFTkSuQmCC"/>Lagos,Nigeria
+     </p>
+     <p class="gmail"><img style="background-color:bisque;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAn1JREFUSEu11cnLzlEUB/DPW4pMKfNUQiEbmS3MYkMZNsTCsEKSEn8AG5QFyYLYGBcksULmKdOCIvNMkbKQOe7RffTze5/H+77Kraen7j33fO853+/3/Or851X3n/P7V4D3OI9LOIaLtR5aDaALjuAbpuN1lcs/SnsHsQwvy7FlgI44i3458C7GVgFpjcEYgtXonP4/YgH2F0GKAJH8dAoYkAKfIF7ZC7VAKnnaYTPm4XO+/6hyWAQ4jGk5+Th8zYB9cA9jCpUEB09xCGvwBbtS3FycQdz/1cYiQJTYIgX2xYP8guDjJPrjRm5LHBU5uI4RaIPbuV3DcaUM8Aw98u9FFYCrGJb3OyTlTMEGdM08rMc6rMJybCoDhNRGYlSWX5zHqwfhZiJ/It6UVDI7CWJvbkuIYSYOpIr3YU4ZYAuWFNERlXRLXIxPfT1VRa5RSYC+RYikO55nHkMgf3AQBAfRJzApJ9uIFdiZSF34L64vktwqJQt1xF744H4y3NBMVpAamo+WNWmVjbYdi4o9xJ7cz/DGrCTlaxmhfSL9KJphag3H15tF0e+HaI4ZWedR2WUMxPckw62p38HX7oJso9rwyauGRkWch/RW4kNu0R20zEnnlxKEY6MLQWjZjL9Cqw27SBZujJ5HW6L8WzlxvDLmTey9S3ET8n6MmHB8vUpqjeuQXwy9cPCnJMWl2PEXdouOD2fH42pWUDlrm+dLyDfWOSwuVFPEKw7KRgNUEgQfazPxsXchuzUAY/7Hd+N4FkG0aHRRUY39ovVMLt2W50+tTj3OycPJv1djASoXYtLGkJuM3uiE4CuUFvt/JK+loiY5taHgplbQUL565z8BlXOFGZPojBoAAAAASUVORK5CYII="/>09168054402, 09039659980</p>
+     
+     <section class="section">
+        <strong style="font-size: 30px; display: flex;">Isah <i class="fa-solid fa-crown"></i></strong> 
+        <span style="font-size: 20px; font-family:'Times New Roman', Times, serif;">MY_TECH_BRO</span>
+     
+    </section>
+     <p>Isah Abdulwahab 2024 <i class="fa-solid fa-bell"></i></p>
+    
+   
+     
+    </div>
+    <div class="label">   <style>textarea:focus{
+        border:2px solid plum;
+        outline:none
+    }</style>
+       <p><label for="Name" style="display: block; margin-bottom:8px;" >NAME</label>
+        <!-- <textarea name="name" id="Name" rows="6px" cols="40px"></textarea> -->
+        <textarea type="text" id="name" name="name" placeholder="kindly,input your name " style="width: 500px; height: 31px; font-size: medium; padding: 5px; word-wrap: break-word;"></textarea>
+       
+    </p>
+   
+    
+        <p><label for="Name" style="display: block; margin-bottom:8px;" >Your Email</label>
+            <!-- <textarea name="name" id="Name" rows="6px" cols="40px"></textarea> -->
+            <textarea type="text" id="name" name="name" placeholder="please,input your email" style="width: 500px; height: 30px; font-size: large; padding:5px; word-wrap: break-word;"></textarea>
+           
+        </p>
+
+    <p><label for="Name" style="display: block; margin-bottom:8px;" >Reason For message</label>
+        <!-- <textarea name="name" id="Name" rows="6px" cols="40px"></textarea> -->
+        <select type="text" id="name" name="name" placeholder="message to  your tech bro" style="width: 500px; height: 30px; font-size: large; padding:5px; word-wrap: break-word;">
+            <option value="need">select a Reason</option>
+            <option value="need">I need a BACK-END developer</option>
+            <option value="need">I need a FRONT-END developer</option>
+            <option value="need">lets, build something together</option>
+            <option value="need">I have a feed back for you</option>
+            <option value="need">just going through the portfolio</option>
+        </select>
+       
+    </p>
+
+        
+
+            <p><label for="Name" style="display: block; margin-bottom:8px; " >Write your message here <i class="fa-regular fa-comment"></i></label>
+            <!-- <textarea name="name" id="Name" rows="6px" cols="40px"></textarea> -->
+            <textarea type="text" id="name" name="name" placeholder="Hi,Isah" style="width: 500px; height: 80px; font-size: large; padding: 40px; word-wrap: break-word;"></textarea>
+           
+        </p>
+
+        <strong style="background-color: blueviolet; border: 30px solid purple; border-radius: 30px;" class="Letschat"><a href="mailto:isahabdulwahab243@gmail.com"> send a message</a></strong>
+        <section class="sectio"> <label for="me"></label>
+            <textarea style="border: 2px solid black; border-radius: 30px; height: 30px; padding-top: 5px; " name="me" id="me" placeholder="Enter your email"></textarea>
+            <span class="subscribe">subscribe</span>
+        </section>
+            <p>Terms Of Sevice          Privacy   Policy</p>
+           
+    </div>
+ 
+    
+ 
+
+
+
+</body>
+
+</html>
