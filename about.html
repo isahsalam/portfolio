@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html style="background-color: rgb(249, 252, 251);" lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POrtfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./about.css">
+    <script>
+        function changeBacgroundColor() {
+            const color=[
+                "grey","milk","bisque","antiquewhite","blanchedalmond"
+            ]
+            let currentColor=0
+            setInterval(()=>{
+                document.documentElement.style.backgroundColor=color[currentColor],
+                currentColor=(currentColor + 1) %color.length
+            },100000)
+            
+        };
+        window.onload=changeBacgroundColor
+    </script>
+    <script>
+        let scrollInterval;
+
+        function startAutoScroll(){
+            const userSpeed=document.getElementById('scroll').value;
+            if(!userSpeed || isNaN(userSpeed) || userSpeed <= 0){
+                alert("please enter a valid seconds")
+                return;
+            }
+            clearInterval(scrollInterval)
+            const speed=userSpeed * 1000
+            
+            scrollInterval=setInterval(()=>{
+                window.scrollBy(0,1)
+            }, speed/100)
+  
+        }
+        function stopAutoScroll(){
+                clearInterval(scrollInterval)
+            }
+    </script>
+
+
+
+  
+<div class="header"><a style="text-decoration: none; transition:all; color: green;" href="./portfolio.html"><h3>Home</h3></a>
+    <a style="text-decoration: none; transition:all; color: green;" href="./about.html"><h3>ABOUT</h3></a>
+        
+        <h3 class="MyTechBro"><i class="fa-solid fa-user"></i>MyTechBro</h3>
+        <h3>projects</h3>
+        <h3>Blog</h3>
+        <h3 class="Resume">Resume</h3></div>
+</head>
+<body>
+    
+    <div class="scroll">
+        <label for="scrollSpeed">Enter scrolling speed (seconds):</label>
+        <input type="number" id="scroll" placeholder="eg,2">
+        <button onclick="startAutoScroll()"> start scrolling</button>
+        <button onclick="stopAutoScroll()"> stop scrolling</button>
+    </div>
+    <p  class="Introduction"><span style="font-size: 15px;">Introduction </span>
+        <strong>About Me</strong>
+    </p>
+    
+<div class="box_wrapper">
+    <!-- <div class="me"> -->
+  
+        <img src="../folder/469355772_574117271890147_2816122999828384834_n.jpg" alt="not supported" width="500px" height="800px">
+   <div class="text">
+
+
+    <strong style="font-size: 50px;">Hello,I'm Isah Abdulwahab</strong>
+    <p>Well, if you are here, you know me.</p>
+
+       <p> You know I will never stop, unless I am satisfied.</p>
+        
+       <p> My name is Isah Abdulwahab — but you can call me My tech bro or bixxy brain💫!</p>
+        
+        <p>I’m currently a Backend Web Developer, based in Lagos, Nigeria. I use express to create beautiful, functional websites. Right now, I’m looking for a job where I can put my skills to good use and work on meaningful projects (●'◡'●)💞.</p>
+        <strong>Student</strong>
+        <p>
+            Alongside my career in tech, I’m pursuing a degree in Economics at the University of Lagos, Nigeria. I also recently graduated from The Curve by Kora as a Backend Developer, where I had the privilege of mentoring a mentee after graduating.</p>
+            <strong>Team Collaboration</strong>
+
+            <p>
+                In September 2024, I and my team five team mates triumphed to victory at The Curve by Kora Hackathon. Out of 12 teams, we came in first place for our standout work on UI, functionality, and presentation with  <a href="https://kindraise.vercel.app"> KindRaise</a>.</p>
+
+                <strong>Strenght</strong>
+                
+                   <p>Problem-Solving Skills: I often seek solutions to challenges, whether it's coding issues or design improvements, and I learn from them effectively.</p> 
+                   <p>Curiosity and Learning: i'm eager to learn and explore different aspects of technology, especially web development.</p> 
+                 <p> Perseverance: i have demonstrated resilience, like when working through tough project challenges or staying up late to achieve my goals.</p>  
+                  <p>Attention to Detail: I ask specific questions and strive to make my work precise and visually appealing.</p>  
+                  <p>Passion for Growth: i am committed to self-improvement, as seen in my goals to become a versed Backend developer and make a positive impact through my projects like KindRaise.</p>  </p>
+
+                  <strong style="color: green;">Above all i invoke Allah The Most High Before And After Starting Anything For His Guidance And Success</strong>
+
+                  <a style="font-size: 25px;" href="https://wa.me/2349168054402?text=Hello!%20I%27m%20interested%20in%20your%20services" target="_blank">
+                    Message me on WhatsApp
+                  </a>
+                  
+    
+    </p>
+    <div class="tech">
+        <div class="stack">
+            <i class="fa-solid fa-code"></i>
+            <strong>Stack</strong>
+            <span>Html,css,javascript, <br>mongodb, git etc</span>
+        </div>
+    
+        <div class="stack">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <strong>Education</strong>
+            <span>Economics/Programming <br>University of Nigeria/TheCurveAfrica</span>
+        </div>
+      
+        <div class="stack">
+            <i class="fa-solid fa-tarp-droplet"></i>
+            <strong>Project</strong>
+            <span>click here to view my projects <br><a href="http://Kindraise.vercel.app"> click me</a></span>
+        </div>
+      
+    
+      
+      
+    
+    </div>
+    <strong style="color: green; font-size: 34px; padding: 20px;">My Tech Stack</strong>
+    <div class="stacks">
+
+       
+      <img class="good" src="../folder/mongodb.png" alt="vs" height="70px" width="10px">
+      <img class="good" src="../folder/vscodee.jpg" alt="vs" height="70px" width="10px">
+      <img class="good" src="../folder/express.jpg" alt="vs" height="70px" width="10px">
+      <img class="good" src="../folder/javascript.png" alt="vs" height="70px" width="10px">
+      <img class="good" src="../folder/html.jpg" alt="vs" height="70px" width="10px">
+      <img class="good" src="../folder/github.png" alt="vs" height="70px" width="700px">
+    
+   </div>
+ 
+
+   
+  
+    </div>
+</div>
+<div class="footer">
+    <p style=" color:rgb(247, 247, 252); font-size: 50px; margin-right: 200px;">
+      Find Me On Any Social Media Platform 🔯.
+    </p>
+    <div id="bottom" class="Linkdin">
+        <a style="font-size: 25px; color: whitesmoke;" href="https://www.facebook.com/profile.php?id=100078756380296&mibextid=ZbWKwL" target="_blank">
+           <img src="../folder/facebook.png" alt=" cant show">
+          </a>
+      <a href="https://www.linkedin.com/in/isah-abdulwahab-ba0018304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target="_blank"><img src="../folder/linkdin.jpg" alt="not available"></a>
+      <a href="https://www.instagram.com/isahabdulwahab243?igsh=YzljYTk1ODg3Zg==" target="_blank"><img src="../folder/ggg.jpg" alt="not available"></a>
+      
+    </div>
+    <a href="https://wa.me/2349168054402?text=Hello!%20I%27m%20interested%20in%20your%20services" target="_blank">
+       <img src="../folder/whatsapp.png" alt="not available" width="">
+      </a>
+  </div>
+  
+  
+</body>
+
+
+</html>

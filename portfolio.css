@@ -1,0 +1,209 @@
+@keyframes float {
+    0% {
+      transform: translateY(0); /* Starting position */
+    }
+    50% {
+      transform: translateY(-10px); /* Move up */
+    }
+    100% {
+      transform: translateY(0); /* Back to start */
+    }
+  }
+.header{
+    justify-content:center;
+    display: flex;
+    gap: 120px;
+    border: solid rgb(248, 235, 235);
+    border-radius: 35px;
+   
+    height: 50px;
+    width: 1000px;
+    padding: 25px;
+    margin-left: 200px;
+    text-decoration: none;
+    transition: transform 0.5 ease-in-out;
+    
+     animation-delay: 0.2s;
+
+}
+.Resume{
+    border: 24px solid blue;
+    margin-bottom: 80px;
+    background-color: blue;
+    padding-top:5px ;
+  
+
+    
+    font-size: x-large;
+    
+    animation-delay: 0.2s;
+    animation: float 5s infinite ease-in-out;
+}
+.MyTechBro{
+    display: flex;
+    gap: 1px;
+    animation-delay: 0.2s;
+    animation: float 5s infinite ease-in-out;
+}
+.pics {
+    display: flex; /* Ensures image and text are placed in a row */
+    align-items: center; /* Vertically centers the content */
+    margin-left: 100px;
+    margin-top: 70px;
+    gap: 40px;
+    animation-delay: 0.2s;
+}
+
+.text {
+    display: grid; /* Makes the text inside use grid layout */
+    grid-template-columns: 1fr; /* Text will stack in a single column */
+    margin-left: 20px; /* Adds space between image and text */
+    width: 500px;
+    word-wrap: break-word;
+    gap: 16px;
+    animation-delay: 0.2s;
+}
+.fa-user{
+    color: blue;
+    animation-delay: 0.2s;
+}
+
+.text h1 {
+    margin: 0;
+    font-size: 24px;
+    animation-delay: 0.2s;
+}
+
+.text p {
+    margin: 5px 0;
+    font-size: 18px;
+    animation-delay: 0.2s;
+}
+.social-media{
+    display: flex;
+    gap: 39px;
+    height: 30px;
+    width: 30px;
+    animation-delay: 0.2s;
+}
+.Letschat{
+    color: azure;
+    border: 30px solid rgb(92, 92, 247);
+    border-radius: 20px;
+    background-color: rgb(86, 86, 247);
+    font-size: 20px;
+    width: fit-content;
+    height: 2px;
+    animation-delay: 0.2s;
+}
+.allLinks{
+    display: flex;
+    gap: 20px;
+    margin-left: 100px;
+    margin-top: 70px;
+    flex-wrap: wrap;
+    animation-delay: 0.2s;
+    animation: float 5s infinite ease-in-out;
+   
+}
+.links{
+    border: solid black;
+    background-color: rgb(32, 1, 32);
+    color: white;
+    border-radius: 25px;
+    height: 400px;
+    width: 500px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    animation: float 5s infinite ease-in-out;
+
+    animation-delay: 0.2s;
+}
+.startHere_background{
+    display: grid;
+    gap: 60px;
+    margin-left: 50px;
+    font-size: large;
+    animation-delay: 0.2s;
+    animation: float 5s infinite ease-in-out;
+}
+.Start_here{
+    border: 30px solid white;
+    background-color: whitesmoke;
+    width: 90px;
+    height: 1px;
+    color: blue;
+    border-radius: 20px;
+    display: flex;
+    animation-delay: 0.2s;
+    animation: float 5s infinite ease-in-out;
+}
+.Background{
+    
+    font-size: 80px;
+    display: grid;
+    gap: 25px;
+    animation-delay: 0.2s;
+    animation: float 5s infinite ease-in-out;
+}
+.text{
+    display: grid;
+    /* word-wrap: break-word; */
+    word-wrap:none;
+}
+.section{
+padding: 100px;
+display: grid;
+gap: 2px;
+border-bottom: 1px solid black;
+animation: float 5s infinite ease-in-out;
+}
+.sectio{
+    padding: 100px;
+    display: flex;
+    gap: 2px;
+    border-bottom: 1px solid black;
+    animation: float 5s infinite ease-in-out;
+    
+    }
+.subscribe{
+    border: 2px solid plum;
+    background-color: plum;
+    border-radius: 30px;
+    margin-left: 30px;
+    width: fit-content;
+    animation: float 5s infinite ease-in-out;
+
+}
+.gmail{
+    height: 40px;
+    width: 40px;
+    display: flex;
+    gap: 10px;
+    animation: float 5s infinite ease-in-out;
+}
+.nighty{
+    display: flex;
+    gap: 300px;
+    margin-top: 55px;
+    margin-left: 75px;
+    animation: float 5s infinite ease-in-out;
+}
+.label{
+    display: grid;
+    animation-delay: 0.2s;
+    font-size: 30px;
+    animation: float 5s infinite ease-in-out;
+}
+.scroll{
+    border: 1px dotted green;
+    border-radius: 60px;
+    padding-top: 20px;
+    color: rgb(49, 27, 2);
+    width: fit-content;
+    margin-top: 40px;
+    font-size: x-large;
+    margin-left: 320px;
+    border-left-color: blue;
+  }  

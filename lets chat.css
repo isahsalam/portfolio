@@ -1,0 +1,53 @@
+.footer{
+    width: 100%;
+    border: 10px solid green;
+    background-color: gold;
+    color: rgb(248, 250, 252);
+  }
+  .Linkdin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 200px;
+    
+  }
+  
+  .Linkdin span {
+    border-top: 2px solid white; 
+    padding-top: 10px; 
+    width: 10px; 
+    gap: 30px;
+    text-align: center; 
+    
+  }
+ 
+  .Linkdin:hover {
+    animation: shake 0.5s;
+  }
+  
+  @keyframes shake {
+    0% {
+      transform: translateX(0);
+    }
+    20% {
+      transform: translateX(-10px);
+    }
+    40% {
+      transform: translateX(10px);
+    }
+    60% {
+      transform: translateX(-10px);
+    }
+    80% {
+      transform: translateX(10px);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+    
+  .nick{
+    font-size:100px;
+    color: goldenrod;
+    
+  }

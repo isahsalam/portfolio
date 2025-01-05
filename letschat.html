@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="./lets chat.css">
+
+
+    <script>
+        function changeName() {
+            const names=[
+                "MY TECH BRO","Isah","Abdul-wahab","BizxyBrain","Wahee-d-luffy"
+            ]
+            let currentName=0
+            setInterval(()=>{
+              const nameElement= document.getElementById('name') 
+              nameElement.textContent=names [currentName]
+                currentName=(currentName + 1) %names.length
+            },1000)
+            
+        };
+        window.onload=changeName
+    </script>
+
+</head>
+<body style="background-color: green;">
+    <div class="footer">
+        <p style=" color:rgb(247, 247, 252); font-size: 50px; margin-right: 200px;">
+          Find Me On Any Social Media Platform 🔯.
+        </p>
+        <div id="bottom" class="Linkdin">
+            <a style="font-size: 25px; color: whitesmoke;" href="https://www.facebook.com/profile.php?id=100078756380296&mibextid=ZbWKwL" target="_blank">
+               <img src="../folder/facebook.png" alt=" cant show" width="130px" height="130px">
+              </a>
+          <a href="https://www.linkedin.com/in/isah-abdulwahab-ba0018304?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"target="_blank"><img src="../folder/linkdin.jpg" alt="not available" width="130px" height="130px"></a>
+          <a href="https://www.instagram.com/isahabdulwahab243?igsh=YzljYTk1ODg3Zg==" target="_blank"><img src="../folder/ggg.jpg" alt="not available" width="130px" height="130px"></a>
+          <a href="https://wa.me/2349168054402?text=Hello!%20I%27m%20interested%20in%20your%20services" target="_blank">
+            <img src="../folder/whatsapp.png" alt="not available" width="130px" height="130px">
+           </a>
+        </div>
+     
+      </div>
+      <p class="nick">Chat with <span id="name" style="color: brown;">MY TECH BRO</span> </p>
+     
+</body>
+</html>
